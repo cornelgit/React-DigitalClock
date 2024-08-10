@@ -1,5 +1,5 @@
 body {
-    background-image: url(assets/background-nightsky.jpg);
+    background-image: url(../assets/background-sky2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,7 +13,6 @@ body {
 
 .clock-container {
     backdrop-filter: blur(5px);
-    width: 100vw;
     padding: 10px 0;
 }
 
