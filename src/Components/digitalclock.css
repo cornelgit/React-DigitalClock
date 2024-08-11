@@ -39,17 +39,12 @@ body {
 }
 
 .date-container {
-    width: 100%;
+    width: 75%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.5rem;
     color: white;
-}
-
-.date span {
-    flex: 1;
-    text-align: center;
 }
 
 .dayString {
