@@ -16,18 +16,40 @@ body {
     padding: 10px 0;
     color: white;
     font-size: 6rem;
-    font-weight: bold;
     font-family: monospace;
     text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 75%);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
 }
 
 .meridiem-block {
-    display: flex;
-    align-items: center;
     margin-left: 25px;
     font-size: 3rem;
+}
+
+.date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.date {
+    margin-right: 125px;
+}
+
+.dayString {
+    font-size: 1.5rem;
+    color: white;
 }
