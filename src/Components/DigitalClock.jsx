@@ -22,9 +22,12 @@ function DigitalClock() {
 
         hours = hours % 12 || 12;
 
-        return `${padZero(hours)}:${padZero(minutes)}:${padZero(
-            seconds
-        )} ${meridiem}`;
+        return {
+            hours: hours,
+            minutes: padZero(minutes),
+            seconds: padZero(seconds),
+            meridiem: meridiem,
+        };
     }
 
     function padZero(number) {
@@ -33,8 +36,17 @@ function DigitalClock() {
 
     return (
         <div className="clock-container">
-            <div className="clock">
-                <span>{formatTime()}</span>
+            <div className="time-block">
+                <span>{`${formatTime().hours}:`}</span>
+            </div>
+            <div className="time-block">
+                <span>{`${formatTime().minutes}:`}</span>
+            </div>
+            <div className="time-block">
+                <span>{`${formatTime().seconds}`}</span>
+            </div>
+            <div className="meridiem-block">
+                <span className="meridiem">{formatTime().meridiem}</span>
             </div>
         </div>
     );
