@@ -29,6 +29,8 @@ body {
 .clock {
     display: flex;
     align-items: center;
+    padding: 0px 10px;
+    margin-bottom: 5px;
 }
 
 .meridiem-block {
@@ -37,16 +39,17 @@ body {
 }
 
 .date-container {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 10px;
     font-size: 1.5rem;
     color: white;
 }
 
-.date {
-    margin-right: 125px;
+.date span {
+    flex: 1;
+    text-align: center;
 }
 
 .dayString {

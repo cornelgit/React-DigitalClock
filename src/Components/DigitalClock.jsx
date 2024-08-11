@@ -14,7 +14,7 @@ function DigitalClock() {
         };
     }, []);
 
-    function formatTime() {
+    function formatDateTime() {
         const month = time.getMonth() + 1;
         const day = time.getDate();
         const year = time.getFullYear();
@@ -47,26 +47,28 @@ function DigitalClock() {
         <div className="clock-container">
             <div className="clock">
                 <div className="time-block">
-                    <span>{`${formatTime().hours}:`}</span>
+                    <span>{`${formatDateTime().hours}:`}</span>
                 </div>
                 <div className="time-block">
-                    <span>{`${formatTime().minutes}:`}</span>
+                    <span>{`${formatDateTime().minutes}:`}</span>
                 </div>
                 <div className="time-block">
-                    <span>{`${formatTime().seconds}`}</span>
+                    <span>{`${formatDateTime().seconds}`}</span>
                 </div>
                 <div className="meridiem-block">
-                    <span className="meridiem">{formatTime().meridiem}</span>
+                    <span className="meridiem">
+                        {formatDateTime().meridiem}
+                    </span>
                 </div>
             </div>
             <div className="date-container">
                 <div className="date">
-                    <span>{`${formatTime().month}/`}</span>
-                    <span>{`${formatTime().day}/`}</span>
-                    <span>{`${formatTime().year}`}</span>
+                    <span>{`${formatDateTime().month}/`}</span>
+                    <span>{`${formatDateTime().day}/`}</span>
+                    <span>{`${formatDateTime().year}`}</span>
                 </div>
                 <div className="dayString">
-                    <span>{`${formatTime().dayOfWeek}`}</span>
+                    <span>{`${formatDateTime().dayOfWeek}`}</span>
                 </div>
             </div>
         </div>
