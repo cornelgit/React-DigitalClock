@@ -43,32 +43,32 @@ function DigitalClock() {
         return (number < 10 ? "0" : "") + number;
     }
 
+    const formattedTime = formatDateTime();
+
     return (
-        <div className="clock-container">
-            <div className="clock">
-                <div className="time-block">
-                    <span>{`${formatDateTime().hours}:`}</span>
+        <div className="clock-container" role="timer" aria-live="polite">
+            <div className="clock" aria-label="Current time">
+                <div className="time-block" aria-label="Hours">
+                    <span>{`${formattedTime.hours}:`}</span>
                 </div>
-                <div className="time-block">
-                    <span>{`${formatDateTime().minutes}:`}</span>
+                <div className="time-block" aria-label="Minutes">
+                    <span>{`${formattedTime.minutes}:`}</span>
                 </div>
-                <div className="time-block">
-                    <span>{`${formatDateTime().seconds}`}</span>
+                <div className="time-block" aria-label="Seconds">
+                    <span>{`${formattedTime.seconds}`}</span>
                 </div>
-                <div className="meridiem-block">
-                    <span className="meridiem">
-                        {formatDateTime().meridiem}
-                    </span>
+                <div className="meridiem-block" aria-label="Meridiem">
+                    <span className="meridiem">{formattedTime.meridiem}</span>
                 </div>
             </div>
-            <div className="date-container">
+            <div className="date-container" aria-label="Current date">
                 <div className="date">
-                    <span>{`${formatDateTime().month}/`}</span>
-                    <span>{`${formatDateTime().day}/`}</span>
-                    <span>{`${formatDateTime().year}`}</span>
+                    <span>{`${formattedTime.month}/`}</span>
+                    <span>{`${formattedTime.day}/`}</span>
+                    <span>{`${formattedTime.year}`}</span>
                 </div>
                 <div className="dayString">
-                    <span>{`${formatDateTime().dayOfWeek}`}</span>
+                    <span>{`${formattedTime.dayOfWeek}`}</span>
                 </div>
             </div>
         </div>

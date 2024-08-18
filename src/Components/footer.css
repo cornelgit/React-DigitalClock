@@ -1,6 +1,6 @@
 .footer {
     background-color: transparent;
-    color: white;
+    color: white; /* Ensure this has sufficient contrast */
     padding: 5px 0;
     text-align: center;
     width: 100%;
