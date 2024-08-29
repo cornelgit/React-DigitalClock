@@ -1,5 +1,6 @@
 .clock-container {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.3);
     padding: 10px 0;
     color: white;
     font-size: 6rem;
@@ -37,4 +38,28 @@
 .dayString {
     font-size: 1.5rem;
     color: white;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 738px) {
+    .clock-container {
+        width: 100%;
+        font-size: 3rem;
+    }
+
+    .meridiem-block {
+        margin-left: 15px;
+        font-size: 2rem;
+    }
+
+    .date-container {
+        padding-left: 20px;
+        width: 100%;
+        font-size: 1.25rem;
+    }
+
+    .dayString {
+        padding-right: 20px;
+        font-size: 1.25rem;
+    }
 }
