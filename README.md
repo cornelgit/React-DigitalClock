@@ -25,7 +25,7 @@ To get started with the project, follow these steps:
 1. Clone the repository:
     ```bash
     git clone https://github.com/yourusername/React-DigitalClock.git
-    cd anime-video-player
+    cd clock
     ```
 2. Install any dependencies:
    npm install
