@@ -44,12 +44,6 @@ To build the application for production, run:
 npm run build
 ```
 
-To start the production server, execute:
-
-```bash
-npm start
-```
-
 ## Contributing
 
 If you'd like to contribute to this project, please fork the repository and submit a pull request. Any contributions are welcome!
